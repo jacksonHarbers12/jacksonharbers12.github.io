@@ -1,0 +1,211 @@
+/* Animations CSS for 90s-themed blog */
+
+/* Blinking text animation */
+.blink {
+  animation: blink-animation 1s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+/* Rainbow text animation */
+.rainbow-text {
+  animation: rainbow-animation 6s linear infinite;
+}
+
+@keyframes rainbow-animation {
+  0% { color: #ff0000; }
+  16% { color: #ff8000; }
+  33% { color: #ffff00; }
+  50% { color: #00ff00; }
+  66% { color: #00ffff; }
+  83% { color: #0000ff; }
+  100% { color: #ff00ff; }
+}
+
+/* Neon glow animation */
+.neon-glow {
+  animation: neon-animation 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-animation {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0073e6, 0 0 40px #0073e6, 0 0 50px #0073e6, 0 0 60px #0073e6, 0 0 70px #0073e6;
+  }
+}
+
+/* Sliding background animation */
+.sliding-bg {
+  background-image: linear-gradient(90deg, #ff00ff, #00ffff, #00ff00, #ffff00, #ff00ff);
+  background-size: 400% 100%;
+  animation: sliding-bg-animation 15s linear infinite;
+}
+
+@keyframes sliding-bg-animation {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 400% 50%; }
+}
+
+/* Spinning animation */
+.spin {
+  display: inline-block;
+  animation: spin-animation 5s linear infinite;
+}
+
+@keyframes spin-animation {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Bouncing animation */
+.bounce {
+  animation: bounce-animation 0.5s ease infinite alternate;
+}
+
+@keyframes bounce-animation {
+  from { transform: translateY(0); }
+  to { transform: translateY(-10px); }
+}
+
+/* Shake animation */
+.shake {
+  animation: shake-animation 0.5s ease infinite;
+}
+
+@keyframes shake-animation {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(0); }
+  75% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+/* Typing animation for text */
+.typing {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid var(--color-accent);
+  animation: typing-animation 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing-animation {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--color-accent); }
+}
+
+/* Glitch effect */
+.glitch {
+  position: relative;
+}
+
+.glitch::before, .glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -1px 0 var(--color-error);
+  animation: glitch-animation-1 0.3s ease infinite alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: 1px 0 var(--color-success);
+  animation: glitch-animation-2 0.3s ease infinite alternate-reverse;
+}
+
+@keyframes glitch-animation-1 {
+  from { clip-path: inset(0 0 67% 0); }
+  to { clip-path: inset(33% 0 33% 0); }
+}
+
+@keyframes glitch-animation-2 {
+  from { clip-path: inset(33% 0 33% 0); }
+  to { clip-path: inset(67% 0 0 0); }
+}
+
+/* Star background animation */
+.star-bg {
+  background-image: 
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 2px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 3px);
+  background-size: 550px 550px, 350px 350px, 250px 250px;
+  background-position: 0 0, 40px 60px, 130px 270px;
+  animation: star-twinkle 15s linear infinite;
+}
+
+@keyframes star-twinkle {
+  0% {
+    background-position: 0 0, 40px 60px, 130px 270px;
+  }
+  100% {
+    background-position: 550px 550px, 390px 410px, 380px 520px;
+  }
+}
+
+/* Windows 95 loading bar animation */
+.loading-bar {
+  height: 20px;
+  background-color: var(--color-button);
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--color-border);
+}
+
+.loading-bar::before {
+  content: "";
+  display: block;
+  width: 30%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--color-accent),
+    var(--color-accent) 10px,
+    var(--color-secondary) 10px,
+    var(--color-secondary) 20px
+  );
+  animation: loading-animation 1.5s linear infinite;
+}
+
+@keyframes loading-animation {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(350%); }
+}
+
+/* Scroller animation - for credits or announcements */
+.scroller {
+  height: 2em;
+  line-height: 2em;
+  overflow: hidden;
+  position: relative;
+}
+
+.scroller-content {
+  position: absolute;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Apply these animation classes to elements as needed */

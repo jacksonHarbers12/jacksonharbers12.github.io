@@ -1,0 +1,198 @@
+/* Layout CSS for 90s-themed blog */
+
+/* About section */
+.about-section {
+  margin-bottom: var(--space-4);
+  padding: var(--space-2);
+  background-color: rgba(0, 0, 20, 0.5);
+  border: 2px solid var(--color-border);
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 3px solid var(--color-accent);
+  padding: 5px;
+  background-color: var(--color-background);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.badges {
+  display: flex;
+  gap: var(--space-1);
+  margin-top: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.badges img {
+  max-width: 88px;
+  max-height: 31px;
+  border: none;
+}
+
+/* Posts section */
+.posts-section {
+  margin-bottom: var(--space-4);
+}
+
+.post {
+  margin-bottom: var(--space-3);
+  padding: var(--space-2);
+  background-color: rgba(0, 20, 0, 0.5);
+  border: 2px solid var(--color-border);
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2);
+  padding-bottom: var(--space-1);
+  border-bottom: 1px dotted var(--color-border);
+}
+
+.post-date {
+  color: var(--color-secondary);
+  font-style: italic;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: var(--space-1);
+  font-weight: bold;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Guestbook section */
+.guestbook-section {
+  margin-bottom: var(--space-4);
+  padding: var(--space-2);
+  background-color: rgba(20, 0, 20, 0.5);
+  border: 2px solid var(--color-border);
+}
+
+.guestbook-entries {
+  margin-bottom: var(--space-3);
+}
+
+.guestbook-entry {
+  margin-bottom: var(--space-2);
+  padding: var(--space-1) var(--space-2);
+  background-color: rgba(0, 0, 0, 0.3);
+  border-left: 3px solid var(--color-accent);
+}
+
+.entry-name {
+  font-weight: bold;
+  color: var(--color-success);
+  margin-right: var(--space-1);
+}
+
+.entry-date {
+  font-style: italic;
+  color: var(--color-secondary);
+}
+
+.guestbook-form {
+  padding: var(--space-2);
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--color-border);
+}
+
+.form-group {
+  margin-bottom: var(--space-2);
+}
+
+.submit-btn {
+  background-color: var(--color-button);
+  color: var(--color-button-text);
+  cursor: pointer;
+}
+
+/* Archive section */
+.archive-section {
+  margin-bottom: var(--space-4);
+}
+
+.archive-navigator {
+  margin-bottom: var(--space-3);
+  text-align: center;
+}
+
+.year-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-top: var(--space-1);
+}
+
+.year-btn {
+  min-width: 100px;
+}
+
+.archive-posts {
+  margin-bottom: var(--space-3);
+}
+
+.archive-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Responsive layouts */
+@media (min-width: 769px) {
+  .post-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: var(--space-3);
+  }
+  
+  .blog-post {
+    grid-column: 1;
+  }
+  
+  .post-sidebar {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .post-header {
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+  
+  .post-container {
+    display: block;
+  }
+  
+  .post-sidebar {
+    margin-top: var(--space-3);
+  }
+  
+  .year-buttons {
+    flex-wrap: wrap;
+  }
+}

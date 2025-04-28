@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Archive - My 90s Blog</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/layout.css">
+  </head>
+  <body>
+    <div class="construction-banner">
+      <img src="https://images.pexels.com/photos/6556802/pexels-photo-6556802.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Under Construction">
+      <marquee scrollamount="3">*** SITE UNDER CONSTRUCTION *** PLEASE PARDON OUR DUST *** SITE UNDER CONSTRUCTION ***</marquee>
+      <img src="https://images.pexels.com/photos/6556802/pexels-photo-6556802.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Under Construction">
+    </div>
+
+    <header>
+      <div id="logo">
+        <pre class="ascii-art">
+ __  __ __   __    ___   ___  ___    ___ _    ___   ___ 
+|  \/  |\ \ / /   / _ \ / _ \/ __|  | _ ) |  / _ \ / __|
+| |\/| | \ V /   | (_) | (_) \__ \  | _ \ |_| (_) | (_ |
+|_|  |_|  |_|     \___/ \___/|___/  |___/____\___/ \___|
+        </pre>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#posts">Posts</a></li>
+          <li><a href="index.html#guestbook">Guestbook</a></li>
+          <li><a href="#" class="blink">Archive</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="archive-section">
+        <h2>// BLOG ARCHIVE //</h2>
+        
+        <div class="archive-navigator">
+          <h3>Browse by year:</h3>
+          <div class="year-buttons">
+            <button class="year-btn" data-year="2025">2025</button>
+            <button class="year-btn" data-year="2024">2024</button>
+            <button class="year-btn" data-year="2023">2023</button>
+          </div>
+        </div>
+
+        <div class="archive-posts" id="archive-2025">
+          <h3>2025 Posts</h3>
+          <table class="archive-table">
+            <tr>
+              <th>Date</th>
+              <th>Title</th>
+              <th>Category</th>
+            </tr>
+            <tr>
+              <td>10/15/2025</td>
+              <td><a href="posts/web-brutalism.html">The Return of Web Brutalism</a></td>
+              <td>Design</td>
+            </tr>
+            <tr>
+              <td>10/10/2025</td>
+              <td><a href="posts/bbs-memories.html">My Favorite BBS Memories</a></td>
+              <td>Nostalgia</td>
+            </tr>
+            <tr>
+              <td>10/05/2025</td>
+              <td><a href="posts/midi-collections.html">Essential MIDI Collections for Web Developers</a></td>
+              <td>Music</td>
+            </tr>
+            <tr>
+              <td>09/28/2025</td>
+              <td><a href="posts/geocities-neighborhoods.html">Geocities Neighborhoods: A Visual Tour</a></td>
+              <td>Web History</td>
+            </tr>
+            <tr>
+              <td>09/15/2025</td>
+              <td><a href="posts/netscape-vs-ie.html">Netscape vs. Internet Explorer: The First Browser War</a></td>
+              <td>Tech History</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="archive-posts" id="archive-2024" style="display: none;">
+          <h3>2024 Posts</h3>
+          <table class="archive-table">
+            <tr>
+              <th>Date</th>
+              <th>Title</th>
+              <th>Category</th>
+            </tr>
+            <tr>
+              <td>12/20/2024</td>
+              <td><a href="posts/pixel-art-tutorial.html">Pixel Art Tutorial for Beginners</a></td>
+              <td>Art</td>
+            </tr>
+            <tr>
+              <td>11/15/2024</td>
+              <td><a href="posts/90s-color-palettes.html">90s Color Palettes That Still Work Today</a></td>
+              <td>Design</td>
+            </tr>
+            <tr>
+              <td>10/31/2024</td>
+              <td><a href="posts/y2k-panic.html">Remembering the Y2K Panic</a></td>
+              <td>Tech History</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="archive-posts" id="archive-2023" style="display: none;">
+          <h3>2023 Posts</h3>
+          <table class="archive-table">
+            <tr>
+              <th>Date</th>
+              <th>Title</th>
+              <th>Category</th>
+            </tr>
+            <tr>
+              <td>12/25/2023</td>
+              <td><a href="posts/first-post.html">My First Blog Post</a></td>
+              <td>Personal</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="webring">
+        <p>Proud member of the 90s Webring</p>
+        <div class="webring-links">
+          <a href="#">&lt; Previous</a>
+          <a href="#">Random</a>
+          <a href="#">Next &gt;</a>
+        </div>
+      </div>
+      <p>© 2025 My 90s Blog. Best viewed with Netscape Navigator.</p>
+      <p>
+        <span class="footer-links">
+          <a href="mailto:webmaster@my90sblog.com">Email Webmaster</a> |
+          <a href="#">Privacy Policy</a> |
+          <a href="#">Site Map</a>
+        </span>
+      </p>
+      <p class="hit-counter">Hit Counter: <span id="hit-count">42069</span></p>
+    </footer>
+
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/archive.js"></script>
+  </body>
+</html>
